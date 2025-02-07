@@ -1,0 +1,23 @@
+database:
+  postgres:
+    host: localhost
+    port: 5432
+    dbname: enterprise_rag
+    user: admin
+    password: securepass123
+    
+neo4j:
+  uri: bolt://localhost:7687
+  user: neo4j
+  password: graphdb123
+
+models:
+  embedding: BAAI/bge-large-en-v1.5
+  llm: meta-llama/Llama-2-70b-chat-hf
+  reranker: cross-encoder/ms-marco-electra-base
+
+api:
+  port: 8000
+  auth:
+    enabled: true
+    jwt_secret: supersecuresecretkey123
